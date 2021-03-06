@@ -102,6 +102,24 @@ namespace EFDemo
                           };
 
             var sss = result7.ToList();
+
+            // https://docs.microsoft.com/zh-cn/ef/core/querying/tracking 
+            // 不跟踪查询
+
+            // https://docs.microsoft.com/zh-cn/ef/core/querying/related-data/explicit
+            // 显式加载查询
+
+            // https://docs.microsoft.com/zh-cn/ef/core/querying/raw-sql
+            // 原始SQL查询
+
+            // https://docs.microsoft.com/zh-cn/ef/core/querying/single-split-queries
+            // 拆分查询
+
+            // https://docs.microsoft.com/zh-cn/ef/core/querying/database-functions
+            // 使用内置函数查询
+
+            // https://docs.microsoft.com/zh-cn/ef/core/querying/user-defined-function-mapping
+            // 自定义函数查询
         }
     }
 }
