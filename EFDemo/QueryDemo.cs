@@ -63,7 +63,11 @@ namespace EFDemo
                               commentTitle = commentResult.Title
                           };
             var ssss = result5.ToList();
-            // Linq-Right Join 右连接
+            /* Linq-Right Join 右连接
+             SELECT [b].[Title] AS [BlogName], [c].[Title] AS [commentTitle]
+             FROM [Blogs] AS [b]
+             LEFT JOIN [Comment] AS [c] ON [b].[Id] = [c].[BlogId]
+            */
             var result6 = from comment in con.Comment
 
                           join blogdata in con.Blogs
@@ -77,7 +81,12 @@ namespace EFDemo
                               BlogName = blogResult.Title
                           };
 
-            // Linq-Let 子查询
+            /* Linq-Let 子查询
+             SELECT [b].[Title], [b].[Id], [c].[Title], [c].[Content], [c].[Id]
+             FROM [Blogs] AS[b]
+             LEFT JOIN [Comment] AS[c] ON[b].[Id] = [c].[BlogId]
+             ORDER BY [b].[Id], [c].[Id]
+            */
             var result7 = from blogdata in con.Blogs
 
                           let comment = (from comment in con.Comment
